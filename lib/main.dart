@@ -24,6 +24,14 @@ class PerguntaApp extends StatelessWidget {
               child: Text('Resposta 1'),
               onPressed: null,
             ),
+            ElevatedButton(
+              child: Text('Resposta 1'),
+              onPressed: null,
+            ),
+            ElevatedButton(
+              child: Text('Resposta 1'),
+              onPressed: null,
+            ),
           ],
         ),
       ),
