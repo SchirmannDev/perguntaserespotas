@@ -5,6 +5,10 @@ main() => runApp(PerguntaApp());
 class PerguntaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final perguntas = [
+      'QUal é sua cor favorita?',
+      'Qual é o seu animal favorito?',
+    ];
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -13,7 +17,9 @@ class PerguntaApp extends StatelessWidget {
             child: Text('Perguntas'),
           ),
         ),
-        body: Text('Hellow FLutter'),
+        body: Column(
+          children: [Text(perguntas.elementAt(0))],
+        ),
       ),
     );
   }
