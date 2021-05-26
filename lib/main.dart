@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 
 main() => runApp(PerguntaApp());
 
-class PerguntaApp extends StatelessWidget {
+class PerguntaAppState extends State<PerguntaApp> {
   var perguntaSelecionada = 0;
-
   void responder() {
     perguntaSelecionada++;
     print(perguntaSelecionada);
@@ -45,3 +44,5 @@ class PerguntaApp extends StatelessWidget {
     );
   }
 }
+
+class PerguntaApp extends StatefulWidget {}
