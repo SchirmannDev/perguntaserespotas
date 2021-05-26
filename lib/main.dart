@@ -45,4 +45,8 @@ class PerguntaAppState extends State<PerguntaApp> {
   }
 }
 
-class PerguntaApp extends StatefulWidget {}
+class PerguntaApp extends StatefulWidget {
+  PerguntaAppState createState() {
+    return PerguntaAppState();
+  }
+}
