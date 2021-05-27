@@ -17,11 +17,15 @@ class _PerguntaAppState extends State<PerguntaApp> {
     final List<Map<String, Object>> perguntas = [
       {
         'texto': 'Qual é sua cor favorita?',
-        'respostas': [''],
+        'respostas': ['ROSA', 'AMARELO', 'LARANJA', 'AZUL'],
       },
       {
         'texto': 'Qual é o seu animal favorito?',
-        'respostas': [''],
+        'respostas': ['GATO', 'CACHORRO', 'PASSARO', 'PEIXE'],
+      },
+      {
+        'texto': 'Qual é o seu instrutor favorito?',
+        'respostas': ['BONIEK', 'MAYK', 'LEONARDO', 'MANGUINHO'],
       },
     ];
     return MaterialApp(
