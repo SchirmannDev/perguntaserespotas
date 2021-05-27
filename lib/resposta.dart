@@ -24,7 +24,7 @@ class Resposta extends StatelessWidget {
             fontSize: 18,
           ),
         ),
-        onPressed: () {},
+        onPressed: quandoSelecionado,
       ),
     );
   }
