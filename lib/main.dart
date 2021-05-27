@@ -16,7 +16,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
   @override
   Widget build(BuildContext context) {
     final perguntas = [
-      'QUal é sua cor favorita?',
+      'Qual é sua cor favorita?',
       'Qual é o seu animal favorito?',
     ];
     return MaterialApp(
