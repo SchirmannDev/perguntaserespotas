@@ -32,7 +32,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
     List<Widget> respostas = [];
 
     for (String textoResp in perguntas[_perguntaSelecionada]['respostas']) {
-      respostas.add(Resposta(textoResp))
+      respostas.add(Resposta(textoResp, _responder));
     }
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -45,9 +45,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
         body: Column(
           children: [
             Questao(perguntas[_perguntaSelecionada]['texto']),
-            Resposta('Resposta 1', _responder),
-            Resposta('Resposta 2', _responder),
-            Resposta('Resposta 3', _responder),
+            ...respostas
           ],
         ),
       ),
