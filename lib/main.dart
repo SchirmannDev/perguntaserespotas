@@ -28,6 +28,12 @@ class _PerguntaAppState extends State<PerguntaApp> {
         'respostas': ['BONIEK', 'MAYK', 'LEONARDO', 'MANGUINHO'],
       }
     ];
+
+    List<Widget> respostas = [];
+
+    for (String textoResp in perguntas[_perguntaSelecionada]['respostas']) {
+      respostas.add(Resposta(textoResp))
+    }
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
