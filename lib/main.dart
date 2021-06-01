@@ -22,14 +22,22 @@ class _PerguntaAppState extends State<PerguntaApp> {
   ];
 
   void _responder() {
-    setState(() {
-      _perguntaSelecionada++;
-    });
+    if (temPerguntaSelecionada) {
+      setState(() {
+        _perguntaSelecionada++;
+      });
+    }
+  }
+
+  bool get temPerguntaSelecionada {
+    return _perguntaSelecionada < _perguntas.length;
   }
 
   @override
   Widget build(BuildContext context) {
-    List<String> respostas = _perguntas[_perguntaSelecionada]['respostas'];
+    List<String> respostas = temPerguntaSelecionada
+        ? _perguntas[_perguntaSelecionada]['respostas']
+        : null;
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -39,12 +47,16 @@ class _PerguntaAppState extends State<PerguntaApp> {
             child: Text('Perguntas'),
           ),
         ),
-        body: Column(
-          children: [
-            Questao(_perguntas[_perguntaSelecionada]['texto']),
-            ...respostas.map((t) => Resposta(t, _responder)).toList()
-          ],
-        ),
+        body: temPerguntaSelecionada
+            ? Column(
+                children: [
+                  Questao(_perguntas[_perguntaSelecionada]['texto']),
+                  ...respostas.map((t) => Resposta(t, _responder)).toList()
+                ],
+              )
+            : Center(
+                child: Text('PARA BÉNS'),
+              ),
       ),
     );
   }
