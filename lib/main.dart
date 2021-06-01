@@ -58,9 +58,10 @@ class _PerguntaAppState extends State<PerguntaApp> {
                 child: Text(
                   'PARA BÉNS',
                   style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.pink,
-                      fontWeight: FontWeight.bold),
+                    fontSize: 30,
+                    color: Colors.pink,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
       ),
