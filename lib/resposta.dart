@@ -12,7 +12,7 @@ class Resposta extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: Colors.purple,
+          primary: Color.fromRGBO(65, 105, 225, 40),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50), // <-- Radius
           ),
