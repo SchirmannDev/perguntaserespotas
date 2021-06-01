@@ -39,6 +39,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
+            elevation: 0,
             title: Center(
               child: Text('Perguntas'),
             ),
